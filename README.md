@@ -1,64 +1,38 @@
 # LogLens
 
-A telemetry ingestion and AI log-analysis service, built in public as a hands-on learning project.
+A demo project: telemetry ingestion and AI-assisted log analysis on Azure. Built to practice and show CI/CD, containers, infrastructure as code, event-driven services, observability, and AI-assisted development.
 
-**Status: planning (Phase 1).** Nothing here runs yet. This README describes what is being built and will be updated as each phase lands.
+The master copy of code and docs lives in the public GitHub repo `loglens`.
 
-## What it is
+## Where things are
 
-LogLens pulls events from a free public data feed, stores them in SQL Server, exposes them through a small API, and uses an analysis agent to find slow operations and anomalies in its own telemetry. A human approves any action the agent proposes.
+- `docs/training-plan.md`: kept locally and not in the repo
+- `docs/design-doc.md`: design document (Phase 1)
+- `docs/build-log.md`: Friday build log (what worked, what broke, what I would change)
+- `CLAUDE.md`: rules for Claude Code and Claude Projects
 
-The project is also a deliberate exercise in the parts of delivery that sit around the code: pipelines, containers, infrastructure as code, observability, and incident response.
+## Status
 
-## Planned architecture
+Last updated: Nov 4, 2026. Planned start was Nov 2, 2026.
 
-1. **Ingest (C#, Azure Functions):** a timer trigger polls a public feed and writes raw data to Blob Storage. A queue trigger normalizes it, and a blob trigger archives it.
-2. **Data (SQL Server):** Azure SQL, with SQL Server in Docker for local work. The first schema is intentionally slow. Query times are recorded before and after tuning.
-3. **API (C#, ASP.NET Core Web API, Docker):** query endpoints built in layers, with xUnit unit tests and integration tests against a real SQL container.
-4. **Analysis agent (Python, FastAPI):** queries Log Analytics with KQL, finds anomalies and slow operations, and summarizes them. A human approves any action.
-5. **Secrets and identity:** Key Vault and managed identity. No secrets in the repo, and a secret-scanning step in CI.
-6. **Delivery:** YAML pipelines (build, test, container image, deploy to dev, QA, then production with approval gates) and Bicep templates for every Azure resource.
-7. **Operations:** Application Insights and OpenTelemetry traces, alert rules, a service-level objective, a runbook, and a deliberate failure that is diagnosed and written up.
+Phase 1, Step 0 (accounts and configuration): **in progress**
 
-## Tech
+Done:
 
-C# on the current .NET LTS, ASP.NET Core, Azure Functions, SQL Server, Python 3 and FastAPI, Docker, Bicep, Azure DevOps and GitHub Actions, Postman and Newman, a local Kubernetes cluster (kind or minikube), and Azure monitoring tools.
+- Microsoft account protected (two-factor, security defaults on the directory)
+- GitHub account with two-factor; public `loglens` repo with README, secret scanning and push protection
+- Azure subscription with a budget saved (Cost Management may not be fully live until about Sunday, Nov 8)
+- Azure DevOps organization `LincolnCabler` with the private LogLens project; free pipeline minutes confirmed
+- Password manager set up with GitHub and Proton saved
+- claude.ai Project for LogLens created (with README.md and CLAUDE.md)
 
-## Roadmap
+Still open:
 
-| Phase | Weeks | Focus |
-|---|---|---|
-| 1 | 1-2 | Accounts, repo, boards, design doc |
-| 2 | 3-5 | Ingestion functions and the SQL schema, with tuning |
-| 3 | 6-7 | Web API, Docker, Container Apps, local Kubernetes, Postman tests |
-| 4 | 8-9 | CI/CD pipelines and Bicep |
-| 5 | 10 | Observability and an incident postmortem |
-| 6 | 11-12 | Python analysis agent with human approval |
+1. Install Git; clone `loglens` outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
+2. Install the Azure Pipelines GitHub app on the `loglens` repo only; run a "hello world" pipeline (completes the Step 0 checkpoint)
+3. Tools that can wait for Phase 2: Docker Desktop, Python 3, Postman, Azure CLI, Node.js and Newman; confirm Visual Studio 2026 is signed in with the personal Microsoft account
+4. Connect the repo to the claude.ai Project
+5. Boards work items, design doc, branch policies on `main`
+6. Record Azure DevOps and Azure details in the private note and password manager
 
-## Ground rules
-
-- Public data and invented names only. No code, schema, tickets, or data from any employer.
-- No secrets in the repository. Secret scanning and push protection are on.
-- Zero-cost target: free tiers only, with budget alerts, and resources are deleted when not in use.
-
-## Repository layout (planned)
-
-```
-/docs       design doc, decision records, runbook, postmortem
-/src        C# functions and API
-/analysis   Python analysis agent
-/infra      Bicep templates
-/pipelines  YAML pipeline definitions
-```
-
-## Running it
-
-Instructions will be added as each phase is built.
-
-## Author
-
-Lincoln Cabler. See the build log in `/docs` once it exists.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+Open decision: final GitHub username (renaming later changes the profile URL).
