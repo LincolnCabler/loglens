@@ -19,8 +19,8 @@ Public demo project that shows senior-level skills: Azure Functions, SQL Server 
 
 ## Owner
 
-Lincoln Cabler. Personal Microsoft account: LincolnProject. Never ask for or accept passwords or tokens in chat.
+Lincoln Cabler. Using personal Microsoft account. Never ask for or accept passwords or tokens in chat.
 
 ## Status
 
-Phase 1, Step 0 (accounts): in progress as of Nov 4, 2026. Accounts, public `loglens` repo with secret scanning, Azure budget, and Azure DevOps project are done. Open: install Git and clone the repo, connect Azure Pipelines to GitHub, run a hello-world pipeline. Full checklist is in `README.md`.
+Phase 1, Step 0 (accounts): in progress as of Nov 4, 2026. Accounts, public `loglens` repo with secret scanning, Azure budget, and Azure DevOps project are done. Open: connect Azure Pipelines to GitHub, run a hello-world pipeline. Full checklist is in `README.md`.

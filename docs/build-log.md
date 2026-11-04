@@ -12,6 +12,7 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 - Created the Azure DevOps organization `LincolnCabler` with a private LogLens project; confirmed free pipeline minutes.
 - Set up a password manager with GitHub and Proton entries.
 - Created the claude.ai Project for LogLens and added `README.md` and `CLAUDE.md`.
+- Install Git and clone `loglens` outside OneDrive.
 
 ### What broke or got in the way
 
@@ -24,7 +25,6 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 
 ### Open items
 
-- Install Git and clone `loglens` outside OneDrive.
 - Connect Azure Pipelines to GitHub (repo `loglens` only) and run a hello-world pipeline.
 - Connect the repo to the claude.ai Project.
 - Decide the final GitHub username before publishing anything else.

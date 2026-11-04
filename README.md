@@ -25,14 +25,14 @@ Done:
 - Azure DevOps organization `LincolnCabler` with the private LogLens project; free pipeline minutes confirmed
 - Password manager set up with GitHub and Proton saved
 - claude.ai Project for LogLens created (with README.md and CLAUDE.md)
+- Install Git; clone `loglens` outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
+- Boards work items, design doc, branch policies on `main`
 
 Still open:
 
-1. Install Git; clone `loglens` outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
-2. Install the Azure Pipelines GitHub app on the `loglens` repo only; run a "hello world" pipeline (completes the Step 0 checkpoint)
-3. Tools that can wait for Phase 2: Docker Desktop, Python 3, Postman, Azure CLI, Node.js and Newman; confirm Visual Studio 2026 is signed in with the personal Microsoft account
-4. Connect the repo to the claude.ai Project
-5. Boards work items, design doc, branch policies on `main`
-6. Record Azure DevOps and Azure details in the private note and password manager
+1. Install the Azure Pipelines GitHub app on the `loglens` repo only; run a "hello world" pipeline (completes the Step 0 checkpoint)
+2. Tools that can wait for Phase 2: Docker Desktop, Python 3, Postman, Azure CLI, Node.js and Newman; confirm Visual Studio 2026 is signed in with the personal Microsoft account
+3. Connect the repo to the claude.ai Project
+4. Record Azure DevOps and Azure details in the private note and password manager
 
 Open decision: final GitHub username (renaming later changes the profile URL).
