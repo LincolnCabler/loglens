@@ -26,7 +26,6 @@ Done:
 - Password manager set up with GitHub and Proton saved
 - claude.ai Project for LogLens created (with README.md and CLAUDE.md)
 - Install Git; clone `loglens` outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
-- Boards work items, design doc, branch policies on `main`
 
 Still open:
 
@@ -34,5 +33,6 @@ Still open:
 2. Tools that can wait for Phase 2: Docker Desktop, Python 3, Postman, Azure CLI, Node.js and Newman; confirm Visual Studio 2026 is signed in with the personal Microsoft account
 3. Connect the repo to the claude.ai Project
 4. Record Azure DevOps and Azure details in the private note and password manager
+5. Boards work items, design doc, branch policies on `main`
 
 Open decision: final GitHub username (renaming later changes the profile URL).
