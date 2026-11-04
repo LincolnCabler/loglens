@@ -29,3 +29,4 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 - Connect Azure Pipelines to GitHub (repo `loglens` only) and run a hello-world pipeline.
 - Decide the final GitHub username before publishing anything else.
 - Re-check Cost Management and the budget on Nov 8.
+- Boards work items, design doc, branch policies on `main`
