@@ -15,7 +15,7 @@ The master copy of code and docs lives in the public GitHub repo `loglens`.
 
 Last updated: Nov 5, 2026. Planned start was Nov 2, 2026.
 
-Phase 1, Step 0 (accounts and configuration): **in progress**
+Phase 1, Step 0 (accounts and configuration): **Complete**
 
 Done:
 
@@ -28,10 +28,10 @@ Done:
 - Installed Git; cloned loglens outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
 - Connect the repo to the claude.ai Project
 - Renamed GitHub account to LincolnCabler
+- Installed the Azure Pipelines GitHub app on the `loglens` repo only; ran the "hello world" pipeline
 
 Still open:
 
-1. Install the Azure Pipelines GitHub app on the `loglens` repo only; run a "hello world" pipeline (completes the Step 0 checkpoint)
-2. Tools that can wait for Phase 2: Docker Desktop, Python 3, Postman, Azure CLI, Node.js and Newman; confirm Visual Studio 2026 is signed in with the personal Microsoft account
-3. Record Azure DevOps and Azure details in the private note and password manager
-4. Boards work items, design doc, branch policies on `main`
+1. Tools that can wait for Phase 2: Docker Desktop, Python 3, Postman, Azure CLI, Node.js and Newman; confirm Visual Studio 2026 is signed in with the personal Microsoft account
+2. Record Azure DevOps and Azure details in the private note and password manager
+3. Boards work items, design doc, branch policies on `main`

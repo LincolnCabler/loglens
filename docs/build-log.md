@@ -15,11 +15,15 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 - Install Git and clone `loglens` outside OneDrive.
 - Connect the repo to the claude.ai Project.
 - Renamed the GitHub account to LincolnCabler before connecting pipelines; confirmed the clone and project sync still work.
+- Connected Azure Pipelines to GitHub (repo `loglens` only) and ran the hello-world pipeline successfully.
 
 ### What broke or got in the way
 
 - OneDrive Folder Backup redirects Documents into OneDrive, so several "Documents" entries show in File Explorer, and a tool looking in the empty local Documents folder missed the Obsidian vault. Decision: leave OneDrive alone and tidy the File Explorer navigation pane instead. The code repo clone will live outside OneDrive.
 - Azure Cost Management may not show data until about Sunday, Nov 8, so the budget alert needs a re-check then.
+- authorize-versus-install confusion
+- public-repo-in-private-project warning (ignored on purpose)
+- the `ubuntu-latest` migration warning.
 
 ### What I would change
 
@@ -27,6 +31,5 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 
 ### Open items
 
-- Connect Azure Pipelines to GitHub (repo `loglens` only) and run a hello-world pipeline.
 - Re-check Cost Management and the budget on Nov 8.
 - Boards work items, design doc, branch policies on `main`

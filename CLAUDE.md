@@ -23,4 +23,11 @@ Lincoln Cabler. Using personal Microsoft account. Never ask for or accept passwo
 
 ## Status
 
-Phase 1, Step 0 (accounts): in progress as of Nov 4, 2026. Accounts, public `loglens` repo with secret scanning, Azure budget, and Azure DevOps project are done. Open: connect Azure Pipelines to GitHub, run a hello-world pipeline. Full checklist is in `README.md`.
+Phase 1, Step 0 (accounts): in Completed Nov 5, 2026. 
+- Accounts
+- public `loglens` repo with secret scanning
+- Azure budget
+- Azure DevOps project
+- connect Azure Pipelines to GitHub
+- run a hello-world pipeline.F
+Full checklist is in `README.md`.
