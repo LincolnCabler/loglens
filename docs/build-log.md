@@ -21,14 +21,14 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 
 - OneDrive Folder Backup redirects Documents into OneDrive, so several "Documents" entries show in File Explorer, and a tool looking in the empty local Documents folder missed the Obsidian vault. Decision: leave OneDrive alone and tidy the File Explorer navigation pane instead. The code repo clone will live outside OneDrive.
 - Azure Cost Management may not show data until about Sunday, Nov 8, so the budget alert needs a re-check then.
-- Authorize-versus-Install confusion:  The pipelines wizard showed a GitHub authorization page that looked like a repo picker but wasn't.  Authorizing Azure DevOps to sign in is not the same as installing the app on a repo, and the wizard spinner hung until I refreshed the tab. Afterward I checked GitHub’s installed-apps page and confirmed the app is limited to the `loglens`repo only.
-- Public-Repo-in-Private-Project warning (ignored on purpose):  Azure DevOps warned that a public repo was selected in a non-public project. I ignored it on purpose: the project stays private, and the pipeline ran successfully on the standard free tier.
+- Authorize-versus-install confusion:  The pipelines wizard showed a GitHub authorization page that looked like a repo picker but wasn't.  Authorizing Azure DevOps to sign in is not the same as installing the app on a repo, and the wizard spinner hung until I refreshed the tab. Afterward I checked GitHub’s installed-apps page and confirmed the app is limited to the `loglens` repo only.
+- Public-repo-in-private-project warning (ignored on purpose):  Azure DevOps warned that a public repo was selected in a non-public project. I ignored it on purpose: the project stays private, and the pipeline ran successfully on the standard free tier.
 - The `ubuntu-latest` migration warning:  The run showed a warning that the `ubuntu-latest` label is migrating to Ubuntu 26 starting Oct 19, 2026. It didn’t affect the result.
 
 ### What I would change
 
-- To be filled in at the end of the week.
 - Pin the ubuntu-latest image version when builds start to matter, so they stay reproducible.
+- Set branch policies on `main` before adding more pipelines, so nothing reaches `main` without review and a passing build.
 
 ### Open items
 
