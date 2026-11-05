@@ -13,7 +13,7 @@ The master copy of code and docs lives in the public GitHub repo `loglens`.
 
 ## Status
 
-Last updated: Nov 4, 2026. Planned start was Nov 2, 2026.
+Last updated: Nov 5, 2026. Planned start was Nov 2, 2026.
 
 Phase 1, Step 0 (accounts and configuration): **in progress**
 
@@ -27,6 +27,7 @@ Done:
 - claude.ai Project for LogLens created (with README.md and CLAUDE.md)
 - Install Git; clone `loglens` outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
 - Connect the repo to the claude.ai Project
+- final GitHub username: LincolnCabler.
 
 Still open:
 
@@ -34,5 +35,3 @@ Still open:
 2. Tools that can wait for Phase 2: Docker Desktop, Python 3, Postman, Azure CLI, Node.js and Newman; confirm Visual Studio 2026 is signed in with the personal Microsoft account
 3. Record Azure DevOps and Azure details in the private note and password manager
 4. Boards work items, design doc, branch policies on `main`
-
-Open decision: final GitHub username (renaming later changes the profile URL).
