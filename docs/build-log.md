@@ -14,7 +14,7 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 - Created the claude.ai Project for LogLens and added `README.md` and `CLAUDE.md`.
 - Install Git and clone `loglens` outside OneDrive.
 - Connect the repo to the claude.ai Project.
-- Renamed the Github username to:  LincolnCabler before connecting pipelines and confirmed the clone and project sync still work.
+- Renamed the GitHub account to LincolnCabler before connecting pipelines; confirmed the clone and project sync still work.
 
 ### What broke or got in the way
 

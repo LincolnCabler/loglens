@@ -24,10 +24,10 @@ Done:
 - Azure subscription with a budget saved (Cost Management may not be fully live until about Sunday, Nov 8)
 - Azure DevOps organization `LincolnCabler` with the private LogLens project; free pipeline minutes confirmed
 - Password manager set up with GitHub and Proton saved
-- claude.ai Project for LogLens created (with README.md and CLAUDE.md)
-- Install Git; clone `loglens` outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
+- Created claude.ai Project for LogLens (with README.md and CLAUDE.md)
+- Installed Git; cloned loglens outside OneDrive (for example `C:\Users\Lincoln Cabler\source\repos`)
 - Connect the repo to the claude.ai Project
-- final GitHub username: LincolnCabler.
+- Renamed GitHub account to LincolnCabler
 
 Still open:
 
