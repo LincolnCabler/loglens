@@ -1,0 +1,6 @@
+#!/bin/sh
+# Git pre-push hook: blocks any push (VS Code, terminal, or Claude) if a
+# tracked file contains an email address. Enable once per clone with:
+#   git config core.hooksPath .githooks
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(git rev-parse --show-toplevel)/scripts/check-emails.ps1"

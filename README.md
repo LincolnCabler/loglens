@@ -11,6 +11,14 @@ The master copy of code and docs lives in the public GitHub repo `loglens`.
 - `docs/build-log.md`: Friday build log (what worked, what broke, what I would change)
 - `CLAUDE.md`: rules for Claude Code and Claude Projects
 
+## Setup after cloning
+
+Turn on the repo's git hooks once per clone, so every push is checked for email addresses (see `.githooks/pre-push`):
+
+```powershell
+git config core.hooksPath .githooks
+```
+
 ## Status
 
 Last updated: Nov 5, 2026. Planned start was Nov 2, 2026.
