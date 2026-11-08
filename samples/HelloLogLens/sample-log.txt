@@ -1,0 +1,7 @@
+2026-11-08T10:00:00Z INFO Service started
+2026-11-08T10:00:05Z INFO Listening on port 8080
+2026-11-08T10:01:12Z WARN Slow query took 1450 ms
+2026-11-08T10:02:30Z INFO Request handled in 42 ms
+2026-11-08T10:03:47Z ERROR Database connection timed out
+2026-11-08T10:03:48Z WARN Retrying database connection (attempt 1)
+2026-11-08T10:03:50Z INFO Database connection restored
