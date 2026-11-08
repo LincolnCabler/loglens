@@ -37,4 +37,3 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 
 - Re-check Cost Management and the budget (due Nov 8): unverified, not yet done.
 - Boards work items, design doc, branch policies on `main`.
-- Commit the `.claude/` skill folder to the repo.
