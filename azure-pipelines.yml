@@ -36,3 +36,24 @@ steps:
     testResultsFormat: NUnit
     testResultsFiles: '$(Common.TestResultsDirectory)/hook-tests.xml'
     testRunTitle: 'Hook tests'
+
+# succeededOrFailed(): run the .NET tests even if the hook tests failed,
+# so one run reports both suites.
+- task: UseDotNet@2
+  displayName: 'Install .NET 10 SDK'
+  condition: succeededOrFailed()
+  inputs:
+    packageType: sdk
+    version: '10.0.x'
+
+- script: dotnet test LogLens.slnx --configuration Release --logger trx --results-directory '$(Common.TestResultsDirectory)/dotnet'
+  displayName: '.NET tests (xUnit)'
+  condition: succeededOrFailed()
+
+- task: PublishTestResults@2
+  displayName: 'Publish .NET test results'
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: VSTest
+    testResultsFiles: '$(Common.TestResultsDirectory)/dotnet/*.trx'
+    testRunTitle: '.NET tests'
