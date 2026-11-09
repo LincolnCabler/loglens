@@ -1,19 +1,38 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# LogLens CI: runs on pushes to main and on pull requests into main.
 
 trigger:
+- main
+
+pr:
 - main
 
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+variables:
+  pesterVersion: '6.2.0'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+steps:
+- pwsh: |
+    if (-not (Get-Module -ListAvailable Pester | Where-Object Version -eq '$(pesterVersion)')) {
+      Install-Module Pester -RequiredVersion '$(pesterVersion)' -Scope CurrentUser -Force -SkipPublisherCheck
+    }
+    Import-Module Pester -RequiredVersion '$(pesterVersion)'
+
+    $config = New-PesterConfiguration
+    $config.Run.Path = 'tests/hooks'
+    $config.Run.Exit = $true
+    $config.Output.Verbosity = 'Detailed'
+    $config.TestResult.Enabled = $true
+    $config.TestResult.OutputFormat = 'NUnitXml'
+    $config.TestResult.OutputPath = '$(Common.TestResultsDirectory)/hook-tests.xml'
+    Invoke-Pester -Configuration $config
+  displayName: 'Hook tests (Pester)'
+
+- task: PublishTestResults@2
+  displayName: 'Publish hook test results'
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: NUnit
+    testResultsFiles: '$(Common.TestResultsDirectory)/hook-tests.xml'
+    testRunTitle: 'Hook tests'
