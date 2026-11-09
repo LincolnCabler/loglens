@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "azure-devops": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@azure-devops/mcp",
+        "LincolnCabler",
+        "-a",
+        "pat",
+        "-d",
+        "core",
+        "work",
+        "work-items"
+      ],
+      "env": {}
+    }
+  }
+}
