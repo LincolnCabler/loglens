@@ -68,3 +68,26 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 - Re-check Cost Management and the budget alert: unverified, carried over from Week 1.
 - Boards work items, design doc (`docs/design-doc.md` is still headings only), and branch policies on `main`.
 - Pin the pipeline agent image.
+
+## Week 3 (Nov 16–22, 2026)
+
+### What worked
+
+- Wrote the Week 2 build log entry (PR #6) from commit messages and pipeline run #20261109.4.
+- Pipeline run #20261120.2 on the PR #6 merge (commit `4ff3e40`) succeeded: 23 passed, 0 failed, 0 others.
+
+### What broke or got in the way
+
+- Job search took most of the week, so no project work beyond catching up the build log.
+- The Week 2 entry was written late (Nov 20, not Friday Nov 13).
+
+### What I would change
+
+- Write each entry on its Friday even in a quiet week. A short entry costs less than catching up.
+- When time is short, do the small items first, like pinning the agent image or setting branch policies. Each fits in a short session and closes an item that's been open since Week 1.
+
+### Open items
+
+- Re-check Cost Management and the budget alert: unverified, carried over from Week 1.
+- Boards work items, design doc (still headings only), and branch policies on `main`.
+- Pin the pipeline agent image.
