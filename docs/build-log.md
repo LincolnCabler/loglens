@@ -37,3 +37,34 @@ One entry each Friday: what worked, what broke, what I would change. Only verifi
 
 - Re-check Cost Management and the budget (due Nov 8): unverified, not yet done.
 - Boards work items, design doc, branch policies on `main`.
+
+## Week 2 (Nov 9–15, 2026)
+
+### What worked
+
+- Added 18 Pester tests for the push-guard hooks. They cover `check-emails.ps1`, the Claude `push-guard.ps1` hook (7 push forms blocked, 5 non-push commands allowed) and the git pre-push hook, which is tested with a real push to a local bare repo. Each test uses a throwaway repo, and no literal email appears in the test file.
+- Checked that the tests catch real regressions. On Windows PowerShell 5.1, putting back the old narrow push pattern fails 4 tests, and putting back the path-text scan bug fails 9.
+- Replaced the hello-world pipeline steps with real CI. The pipeline now runs on pull requests into `main` as well as pushes, and it installs a pinned Pester (6.2.0) and publishes the hook test results.
+- Made the pre-push hook use `pwsh` when it's available, so it also works on macOS, Linux and the Linux pipeline agent.
+- Added the .NET 10 SDK and the xUnit tests to the pipeline, with results published as a separate ".NET tests" run. The .NET steps use `succeededOrFailed()`, so one run reports both suites even if the hook tests fail.
+- Added a project-scoped Azure DevOps MCP server for Claude Code. It's limited to Boards and uses a read-only token kept outside the repo. Tested: it listed the LogLens project.
+- Merged both changes through pull requests (#4 and #5).
+- Pipeline run #20261109.4 on commit `06099a5` (the PR #5 merge) succeeded with one warning. Both test runs passed on the Linux agent: 23 of 23 tests, 5 more than the previous run, in a test duration of 16.8s.
+
+### What broke or got in the way
+
+- The Azure DevOps MCP server's default sign-in uses Microsoft Entra, and it rejected the personal Microsoft account. I switched to token authentication: the server reads a personal access token from my environment, scoped to Work Items: Read and Project and Team: Read.
+- Both test changes were verified only on Windows when they were committed. Linux was confirmed later by pipeline run #20261109.4.
+- The `ubuntu-latest` migration warning (moving to Ubuntu 26 from Oct 19, 2026) still appears as of run #20261109.4. It didn't affect the result.
+
+### What I would change
+
+- Pin the agent image now. The pipeline runs real tests, so a silent switch to Ubuntu 26 could change results.
+- Set branch policies on `main` (a required build on pull requests) now that pull requests trigger CI. Nothing enforces a passing build before merge yet.
+- Keep the commit-message habit of saying what was verified and where (for example "Linux run not yet verified"). It made this log easy to write.
+
+### Open items
+
+- Re-check Cost Management and the budget alert: unverified, carried over from Week 1.
+- Boards work items, design doc (`docs/design-doc.md` is still headings only), and branch policies on `main`.
+- Pin the pipeline agent image.
